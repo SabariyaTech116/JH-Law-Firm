@@ -1,5 +1,6 @@
-import { FaBullseye, FaHandshake, FaGem, FaBolt, FaBalanceScale } from 'react-icons/fa'
+import { FaBullseye, FaHandshake, FaGem, FaBolt } from 'react-icons/fa'
 import { useScrollAnimation } from '../hooks/useScrollAnimation'
+import logo from '../assets/images/logo.png'
 
 const WhoWeAre = () => {
   const [headerRef, headerVisible] = useScrollAnimation(0.2)
@@ -79,11 +80,11 @@ const WhoWeAre = () => {
             })}
           </div>
 
-          {/* Center Justice Symbol */}
+          {/* Center Logo */}
           <div ref={centerRef} className={`flex justify-center animate-on-scroll animate-scale ${centerVisible ? 'visible delay-1' : ''}`}>
             <div className="relative">
               <div className="w-80 h-80 bg-gradient-to-br from-gold-400/20 to-gold-600/20 rounded-full flex items-center justify-center backdrop-blur-sm border border-gold-400/30">
-                <FaBalanceScale className="text-8xl text-gold-400" />
+                <img src={logo} alt="JH Law Firm" className="w-96 h-96 object-contain" />
               </div>
               
               {/* Decorative Rings */}

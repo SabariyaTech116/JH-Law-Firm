@@ -1,9 +1,10 @@
-import { Link } from 'react-router-dom'
+import { Link, useLocation } from 'react-router-dom'
 import { useState } from 'react'
 import logo from '../assets/images/logo.png'
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const location = useLocation()
 
   return (
     <header className="fixed top-0 w-full bg-deep-black/95 backdrop-blur-sm border-b border-gold-400/20 z-50">
@@ -16,12 +17,12 @@ const Header = () => {
           </div>
 
           <nav className="hidden md:flex items-center space-x-8">
-            <Link to="/" className="text-off-white hover:text-gold-400 transition-colors">Home</Link>
-            <Link to="/about" className="text-off-white hover:text-gold-400 transition-colors">About</Link>
-            <Link to="/services" className="text-off-white hover:text-gold-400 transition-colors">Services</Link>
-            <Link to="/practice-areas" className="text-off-white hover:text-gold-400 transition-colors">Practice Areas</Link>
-            <Link to="/blog" className="text-off-white hover:text-gold-400 transition-colors">Blog</Link>
-            <Link to="/contact" className="text-off-white hover:text-gold-400 transition-colors">Contact</Link>
+            <Link to="/" className={`transition-colors ${location.pathname === '/' ? 'text-gold-400' : 'text-off-white hover:text-gold-400'}`}>Home</Link>
+            <Link to="/about" className={`transition-colors ${location.pathname === '/about' ? 'text-gold-400' : 'text-off-white hover:text-gold-400'}`}>About</Link>
+            <Link to="/services" className={`transition-colors ${location.pathname === '/services' ? 'text-gold-400' : 'text-off-white hover:text-gold-400'}`}>Services</Link>
+            <Link to="/practice-areas" className={`transition-colors ${location.pathname === '/practice-areas' ? 'text-gold-400' : 'text-off-white hover:text-gold-400'}`}>Practice Areas</Link>
+            <Link to="/blog" className={`transition-colors ${location.pathname === '/blog' ? 'text-gold-400' : 'text-off-white hover:text-gold-400'}`}>Blog</Link>
+            <Link to="/contact" className={`transition-colors ${location.pathname === '/contact' ? 'text-gold-400' : 'text-off-white hover:text-gold-400'}`}>Contact</Link>
           </nav>
 
           <div className="hidden md:block">
@@ -43,12 +44,12 @@ const Header = () => {
         {isMenuOpen && (
           <div className="md:hidden py-4 border-t border-gold-400/20">
             <nav className="flex flex-col space-y-4">
-              <Link to="/" className="text-off-white hover:text-gold-400 transition-colors">Home</Link>
-              <Link to="/about" className="text-off-white hover:text-gold-400 transition-colors">About</Link>
-              <Link to="/services" className="text-off-white hover:text-gold-400 transition-colors">Services</Link>
-              <Link to="/practice-areas" className="text-off-white hover:text-gold-400 transition-colors">Practice Areas</Link>
-              <Link to="/blog" className="text-off-white hover:text-gold-400 transition-colors">Blog</Link>
-              <Link to="/contact" className="text-off-white hover:text-gold-400 transition-colors">Contact</Link>
+              <Link to="/" className={`transition-colors ${location.pathname === '/' ? 'text-gold-400' : 'text-off-white hover:text-gold-400'}`}>Home</Link>
+              <Link to="/about" className={`transition-colors ${location.pathname === '/about' ? 'text-gold-400' : 'text-off-white hover:text-gold-400'}`}>About</Link>
+              <Link to="/services" className={`transition-colors ${location.pathname === '/services' ? 'text-gold-400' : 'text-off-white hover:text-gold-400'}`}>Services</Link>
+              <Link to="/practice-areas" className={`transition-colors ${location.pathname === '/practice-areas' ? 'text-gold-400' : 'text-off-white hover:text-gold-400'}`}>Practice Areas</Link>
+              <Link to="/blog" className={`transition-colors ${location.pathname === '/blog' ? 'text-gold-400' : 'text-off-white hover:text-gold-400'}`}>Blog</Link>
+              <Link to="/contact" className={`transition-colors ${location.pathname === '/contact' ? 'text-gold-400' : 'text-off-white hover:text-gold-400'}`}>Contact</Link>
             </nav>
           </div>
         )}
