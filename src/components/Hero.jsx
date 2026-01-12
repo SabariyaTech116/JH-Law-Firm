@@ -11,10 +11,10 @@ const Hero = () => {
   return (
     <section id="home" className="relative min-h-screen flex items-center overflow-hidden">
       {/* Background Video */}
-      <video 
-        autoPlay 
-        muted 
-        loop 
+      <video
+        autoPlay
+        muted
+        loop
         playsInline
         className="absolute inset-0 w-full h-full object-cover"
       >
@@ -39,40 +39,40 @@ const Hero = () => {
                   <span className="text-gold-400 text-xs xs:text-sm font-medium tracking-wide">PREMIER LEGAL SERVICES</span>
                 </div>
               </div>
-              
+
               {/* Main Heading */}
               <div ref={headingRef} className={`animate-on-scroll animate-left ${headingVisible ? 'visible' : ''}`}>
                 <h1 className="text-3xl xs:text-4xl sm:text-5xl md:text-6xl lg:text-6xl xl:text-7xl 2xl:text-8xl font-serif font-bold leading-[0.85] mb-4 xs:mb-6">
-                  <span className="text-white drop-shadow-2xl">JH </span>
-                  <span className="gold-text drop-shadow-2xl">LAW FIRM</span>
+                  <span className="text-white drop-shadow-2xl">Best Advocate </span>
+                  <span className="gold-text drop-shadow-2xl">in Hyderabad</span>
                 </h1>
-                
+
                 {/* Subtitle */}
                 <p className="text-lg xs:text-xl sm:text-2xl md:text-3xl text-gold-400 font-medium mb-6 xs:mb-8 drop-shadow-lg">
-                  Advocates & Legal Consultants
+                  Experienced Senior Advocates & Trusted Legal Consultants | Civil, Criminal & Family Law
                 </p>
               </div>
 
               {/* Description */}
               <div ref={descRef} className={`animate-on-scroll animate-left ${descVisible ? 'visible delay-2' : ''}`}>
                 <p className="text-base xs:text-lg sm:text-xl md:text-2xl text-white/90 leading-relaxed max-w-2xl drop-shadow-lg">
-                  Delivering exceptional legal services with unwavering commitment to justice. 
-                  Our experienced team provides comprehensive legal solutions with the highest 
-                  standards of professional excellence.
+                  Delivering professional legal services with unwavering commitment to justice.
+                  Our experienced team of court lawyers provides comprehensive, result-oriented legal solutions
+                  with the highest standards of professional excellence.
                 </p>
               </div>
 
               {/* CTA Buttons */}
               <div ref={buttonsRef} className={`animate-on-scroll ${buttonsVisible ? 'visible delay-3' : ''} flex flex-col xs:flex-row gap-4 xs:gap-6`}>
-                <Link 
-                  to="/about" 
+                <Link
+                  to="/about"
                   className="group px-6 xs:px-8 sm:px-10 py-3 xs:py-4 sm:py-5 bg-gold-gradient text-deep-black font-semibold text-sm xs:text-base sm:text-lg hover:opacity-90 hover:scale-105 transition-all duration-500 flex items-center justify-center shadow-2xl rounded-lg"
                 >
                   About Our Firm
                   <FaArrowRight className="ml-2 xs:ml-3 group-hover:translate-x-2 transition-transform duration-300" />
                 </Link>
-                <Link 
-                  to="/contact" 
+                <Link
+                  to="/contact"
                   className="px-6 xs:px-8 sm:px-10 py-3 xs:py-4 sm:py-5 bg-black/40 backdrop-blur-sm border-2 border-white/30 text-white hover:bg-white/10 hover:border-white/50 hover:scale-105 transition-all duration-500 font-semibold text-sm xs:text-base sm:text-lg text-center shadow-2xl rounded-lg"
                 >
                   Free Consultation
@@ -90,7 +90,7 @@ const Hero = () => {
                     <h3 className="text-lg xs:text-xl sm:text-2xl font-serif font-bold text-white mb-2">Professional Excellence</h3>
                     <p className="text-sm xs:text-base text-white/80">Trusted by thousands of clients</p>
                   </div>
-                  
+
                   <div className="grid grid-cols-2 gap-6 xs:gap-8">
                     <div className="text-center group cursor-pointer">
                       <div className="text-2xl xs:text-3xl sm:text-4xl lg:text-5xl font-bold text-white drop-shadow-2xl group-hover:scale-110 group-hover:text-gold-400 transition-all duration-500">
@@ -118,7 +118,7 @@ const Hero = () => {
 
       {/* Bottom Fade */}
       <div className="absolute bottom-0 left-0 right-0 h-16 xs:h-24 sm:h-32 bg-gradient-to-t from-deep-black to-transparent"></div>
-      
+
       {/* Scroll Indicator */}
       <div className="absolute bottom-4 xs:bottom-6 sm:bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
         <div className="w-5 xs:w-6 h-8 xs:h-10 border-2 border-white/30 rounded-full flex justify-center">

@@ -5,6 +5,8 @@ import WhyChooseUs from '../components/WhyChooseUs'
 import MeetOurLawyers from '../components/MeetOurLawyers'
 import ConsultationForm from '../components/ConsultationForm'
 import ContactInfoStrip from '../components/ContactInfoStrip'
+import LocalCourts from '../components/LocalCourts'
+import SEOContentSection from '../components/SEOContentSection'
 
 // Simple Blog Preview Component
 const BlogPreview = () => {
@@ -68,9 +70,11 @@ const Home = () => {
     <>
       <Hero />
       <ContactInfoStrip />
+      <SEOContentSection />
       <WhoWeAre />
       <PracticeAreasStrip />
       <WhyChooseUs />
+      <LocalCourts />
       <MeetOurLawyers />
       <BlogPreview />
       <ConsultationForm />
