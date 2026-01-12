@@ -10,22 +10,17 @@ const Hero = () => {
   const [cardRef, cardVisible] = useScrollAnimation(0.2)
   return (
     <section id="home" className="relative min-h-screen flex items-center overflow-hidden">
-      {/* Background Video */}
-      <video 
-        autoPlay 
-        muted 
-        loop 
-        playsInline
-        className="absolute inset-0 w-full h-full object-cover"
-      >
-        <source src="https://player.vimeo.com/external/434045526.sd.mp4?s=c27eecc69a27dbc4ff2b87d38afc35f1a9e7c02d&profile_id=139&oauth2_token_id=57447761" type="video/mp4" />
-      </video>
+      {/* Background Image */}
+      <div 
+        className="absolute inset-0 w-full h-full bg-cover bg-center bg-no-repeat"
+        style={{
+          backgroundImage: 'url(https://images.unsplash.com/photo-1497366754035-f200968a6e72?w=1920&h=1080&fit=crop&crop=center)'
+        }}
+      ></div>
 
       {/* Multi-Layer Overlay System */}
-      <div className="absolute inset-0 bg-black/70"></div>
-      <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-black/30 to-transparent"></div>
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,transparent_40%,black/40_100%)]"></div>
-      <div className="absolute inset-0 bg-gradient-to-br from-deep-black/20 via-transparent to-deep-black/30 mix-blend-multiply"></div>
+      <div className="absolute inset-0 bg-black/80"></div>
+      <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/60 to-transparent"></div>
 
       {/* Content Container */}
       <div className="relative z-20 w-full h-full flex items-center py-20 xs:py-24 sm:py-32">
@@ -56,9 +51,7 @@ const Hero = () => {
               {/* Description */}
               <div ref={descRef} className={`animate-on-scroll animate-left ${descVisible ? 'visible delay-2' : ''}`}>
                 <p className="text-base xs:text-lg sm:text-xl md:text-2xl text-white/90 leading-relaxed max-w-2xl drop-shadow-lg">
-                  Delivering exceptional legal services with unwavering commitment to justice. 
-                  Our experienced team provides comprehensive legal solutions with the highest 
-                  standards of professional excellence.
+                  Expert legal representation with proven results. Your trusted advocates for justice.
                 </p>
               </div>
 
@@ -78,38 +71,45 @@ const Hero = () => {
                   Free Consultation
                 </Link>
               </div>
+
+              {/* Professional Excellence */}
+              <div className="bg-black/40 backdrop-blur-sm border border-gold-400/20 rounded-2xl p-4 xs:p-6 shadow-2xl max-w-md">
+                <div className="text-center mb-4 xs:mb-6">
+                  <FaCheckCircle className="text-2xl xs:text-3xl text-gold-400 mx-auto mb-2 xs:mb-3" />
+                  <h3 className="text-base xs:text-lg font-serif font-bold text-white mb-1 xs:mb-2">Professional Excellence</h3>
+                  <p className="text-xs xs:text-sm text-white/80">Trusted by thousands of clients</p>
+                </div>
+                
+                <div className="grid grid-cols-2 gap-4 xs:gap-6">
+                  <div className="text-center group cursor-pointer">
+                    <div className="text-xl xs:text-2xl font-bold text-white drop-shadow-2xl group-hover:scale-110 group-hover:text-gold-400 transition-all duration-500">
+                      1000+
+                    </div>
+                    <div className="text-white/80 mt-1 font-medium tracking-wide drop-shadow-lg group-hover:text-white transition-colors duration-300 text-xs">
+                      CLIENTS SERVED
+                    </div>
+                  </div>
+                  <div className="text-center group cursor-pointer">
+                    <div className="text-xl xs:text-2xl font-bold text-white drop-shadow-2xl group-hover:scale-110 group-hover:text-gold-400 transition-all duration-500">
+                      98%
+                    </div>
+                    <div className="text-white/80 mt-1 font-medium tracking-wide drop-shadow-lg group-hover:text-white transition-colors duration-300 text-xs">
+                      SUCCESS RATE
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
 
             {/* Right Content - 5 columns */}
             <div className="lg:col-span-5 flex justify-center lg:justify-end mt-8 lg:mt-0">
               <div ref={cardRef} className={`animate-on-scroll animate-scale ${cardVisible ? 'visible delay-4' : ''}`}>
-                {/* Trust Metrics Card */}
-                <div className="bg-black/40 backdrop-blur-sm border border-gold-400/20 rounded-2xl p-6 xs:p-8 lg:p-12 shadow-2xl max-w-sm xs:max-w-md w-full">
-                  <div className="text-center mb-6 xs:mb-8">
-                    <FaCheckCircle className="text-3xl xs:text-4xl sm:text-5xl text-gold-400 mx-auto mb-3 xs:mb-4" />
-                    <h3 className="text-lg xs:text-xl sm:text-2xl font-serif font-bold text-white mb-2">Professional Excellence</h3>
-                    <p className="text-sm xs:text-base text-white/80">Trusted by thousands of clients</p>
-                  </div>
-                  
-                  <div className="grid grid-cols-2 gap-6 xs:gap-8">
-                    <div className="text-center group cursor-pointer">
-                      <div className="text-2xl xs:text-3xl sm:text-4xl lg:text-5xl font-bold text-white drop-shadow-2xl group-hover:scale-110 group-hover:text-gold-400 transition-all duration-500">
-                        1000+
-                      </div>
-                      <div className="text-white/80 mt-1 xs:mt-2 font-medium tracking-wide drop-shadow-lg group-hover:text-white transition-colors duration-300 text-xs xs:text-sm">
-                        CLIENTS SERVED
-                      </div>
-                    </div>
-                    <div className="text-center group cursor-pointer">
-                      <div className="text-2xl xs:text-3xl sm:text-4xl lg:text-5xl font-bold text-white drop-shadow-2xl group-hover:scale-110 group-hover:text-gold-400 transition-all duration-500">
-                        98%
-                      </div>
-                      <div className="text-white/80 mt-1 xs:mt-2 font-medium tracking-wide drop-shadow-lg group-hover:text-white transition-colors duration-300 text-xs xs:text-sm">
-                        SUCCESS RATE
-                      </div>
-                    </div>
-                  </div>
-                </div>
+                {/* Single Lawyer Photo */}
+                <img 
+                  src="src/assets/images//profjh.png" 
+                  alt="Senior Lawyer" 
+                  className="w-full h-[90vh] object-cover"
+                />
               </div>
             </div>
           </div>
