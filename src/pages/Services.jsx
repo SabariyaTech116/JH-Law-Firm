@@ -3,19 +3,19 @@ import { FaBullseye, FaBolt, FaShieldAlt, FaGem } from 'react-icons/fa'
 const Services = () => {
   const services = [
     {
-      title: 'Legal Consultation',
-      description: 'Expert legal advice and strategic counsel for complex legal matters',
-      features: ['Initial Case Assessment', 'Legal Strategy Development', 'Risk Analysis', 'Compliance Review']
+      title: 'Online Legal Consultation & Legal Advice',
+      description: 'Expert legal advice in Hyderabad with online legal consultation for your convenience. Professional strategic counsel for complex legal matters.',
+      features: ['Free Initial Consultation', 'Online Video Consultation', 'Legal Strategy Development', 'Risk Analysis', 'Compliance Review']
     },
     {
-      title: 'Document Drafting',
-      description: 'Professional drafting of legal documents and agreements',
-      features: ['Contracts & Agreements', 'Legal Notices', 'Petitions & Applications', 'Corporate Documents']
+      title: 'Legal Documentation Services & Notice Drafting',
+      description: 'Professional legal notice drafting advocate services. Expert court petition drafting lawyer and affidavit drafting advocate.',
+      features: ['Legal Notice Drafting', 'Reply Notice Lawyer Services', 'Cheque Bounce Notice Advocate', 'Court Petition Drafting', 'Affidavit Drafting', 'Legal Documentation Services']
     },
     {
-      title: 'Court Representation',
-      description: 'Skilled advocacy and representation in courts at all levels',
-      features: ['Trial Court Representation', 'Appellate Court Advocacy', 'Supreme Court Matters', 'Arbitration Proceedings']
+      title: 'Court Lawyer & Professional Representation',
+      description: 'Experienced court lawyer providing skilled advocacy and result-oriented representation in courts at all levels across Hyderabad.',
+      features: ['Trial Court Representation', 'High Court Advocacy', 'Appellate Court Matters', 'Arbitration Proceedings', 'Mediation Services']
     },
     {
       title: 'Legal Research',
@@ -40,17 +40,19 @@ const Services = () => {
         <div className="container-max section-padding">
           <div className="text-center mb-16">
             <h1 className="text-5xl lg:text-6xl font-serif font-bold gold-text mb-8">
-              Our Services
+              Professional Legal Services & Online Legal Consultation
             </h1>
             <p className="text-xl text-off-white max-w-3xl mx-auto leading-relaxed">
-              Comprehensive legal solutions tailored to meet your specific needs with 
-              the highest standards of professional excellence.
+              Comprehensive <strong>legal advice in Hyderabad</strong> tailored to meet your specific needs.
+              Our <strong>professional legal services</strong> include <strong>online legal consultation</strong>,
+              legal documentation, court representation, and <strong>result-oriented advocate</strong> solutions
+              with the highest standards of excellence.
             </p>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {services.map((service, index) => (
-              <div 
+              <div
                 key={index}
                 className="bg-gradient-to-b from-gray-900 to-deep-black border border-gold-400/20 p-8 hover:border-gold-400/40 transition-all duration-300"
               >
@@ -106,7 +108,7 @@ const Services = () => {
           </div>
         </div>
       </section>
-    </div>
+    </div >
   )
 }
 
