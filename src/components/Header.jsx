@@ -20,7 +20,9 @@ const Header = () => {
             <Link to="/" className={`transition-colors text-sm lg:text-base ${location.pathname === '/' ? 'text-gold-400' : 'text-off-white hover:text-gold-400'}`}>Home</Link>
             <Link to="/about" className={`transition-colors text-sm lg:text-base ${location.pathname === '/about' ? 'text-gold-400' : 'text-off-white hover:text-gold-400'}`}>About</Link>
             <Link to="/services" className={`transition-colors text-sm lg:text-base ${location.pathname === '/services' ? 'text-gold-400' : 'text-off-white hover:text-gold-400'}`}>Services</Link>
-            <Link to="/practice-areas" className={`transition-colors text-sm lg:text-base ${location.pathname === '/practice-areas' ? 'text-gold-400' : 'text-off-white hover:text-gold-400'}`}>Practice Areas</Link>
+            <Link to="/family-law" className={`transition-colors text-sm lg:text-base ${location.pathname === '/family-law' ? 'text-gold-400' : 'text-off-white hover:text-gold-400'}`}>Family</Link>
+            <Link to="/civil-law" className={`transition-colors text-sm lg:text-base ${location.pathname === '/civil-law' ? 'text-gold-400' : 'text-off-white hover:text-gold-400'}`}>Civil</Link>
+            <Link to="/criminal-law" className={`transition-colors text-sm lg:text-base ${location.pathname === '/criminal-law' ? 'text-gold-400' : 'text-off-white hover:text-gold-400'}`}>Criminal</Link>
             <Link to="/blog" className={`transition-colors text-sm lg:text-base ${location.pathname === '/blog' ? 'text-gold-400' : 'text-off-white hover:text-gold-400'}`}>Blog</Link>
             <Link to="/contact" className={`transition-colors text-sm lg:text-base ${location.pathname === '/contact' ? 'text-gold-400' : 'text-off-white hover:text-gold-400'}`}>Contact</Link>
           </nav>
@@ -31,7 +33,7 @@ const Header = () => {
             </Link>
           </div>
 
-          <button 
+          <button
             className="md:hidden text-gold-400 p-2"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
             aria-label="Toggle menu"
@@ -50,51 +52,65 @@ const Header = () => {
         {isMenuOpen && (
           <div className="md:hidden py-4 border-t border-gold-400/20 bg-deep-black/98 backdrop-blur-sm">
             <nav className="flex flex-col space-y-3">
-              <Link 
-                to="/" 
+              <Link
+                to="/"
                 className={`transition-colors py-2 px-2 rounded ${location.pathname === '/' ? 'text-gold-400 bg-gold-400/10' : 'text-off-white hover:text-gold-400 hover:bg-gold-400/5'}`}
                 onClick={() => setIsMenuOpen(false)}
               >
                 Home
               </Link>
-              <Link 
-                to="/about" 
+              <Link
+                to="/about"
                 className={`transition-colors py-2 px-2 rounded ${location.pathname === '/about' ? 'text-gold-400 bg-gold-400/10' : 'text-off-white hover:text-gold-400 hover:bg-gold-400/5'}`}
                 onClick={() => setIsMenuOpen(false)}
               >
                 About
               </Link>
-              <Link 
-                to="/services" 
+              <Link
+                to="/services"
                 className={`transition-colors py-2 px-2 rounded ${location.pathname === '/services' ? 'text-gold-400 bg-gold-400/10' : 'text-off-white hover:text-gold-400 hover:bg-gold-400/5'}`}
                 onClick={() => setIsMenuOpen(false)}
               >
                 Services
               </Link>
-              <Link 
-                to="/practice-areas" 
-                className={`transition-colors py-2 px-2 rounded ${location.pathname === '/practice-areas' ? 'text-gold-400 bg-gold-400/10' : 'text-off-white hover:text-gold-400 hover:bg-gold-400/5'}`}
+              <Link
+                to="/family-law"
+                className={`transition-colors py-2 px-2 rounded ${location.pathname === '/family-law' ? 'text-gold-400 bg-gold-400/10' : 'text-off-white hover:text-gold-400 hover:bg-gold-400/5'}`}
                 onClick={() => setIsMenuOpen(false)}
               >
-                Practice Areas
+                Family Law
               </Link>
-              <Link 
-                to="/blog" 
+              <Link
+                to="/civil-law"
+                className={`transition-colors py-2 px-2 rounded ${location.pathname === '/civil-law' ? 'text-gold-400 bg-gold-400/10' : 'text-off-white hover:text-gold-400 hover:bg-gold-400/5'}`}
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Civil Law
+              </Link>
+              <Link
+                to="/criminal-law"
+                className={`transition-colors py-2 px-2 rounded ${location.pathname === '/criminal-law' ? 'text-gold-400 bg-gold-400/10' : 'text-off-white hover:text-gold-400 hover:bg-gold-400/5'}`}
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Criminal Law
+              </Link>
+              <Link
+                to="/blog"
                 className={`transition-colors py-2 px-2 rounded ${location.pathname === '/blog' ? 'text-gold-400 bg-gold-400/10' : 'text-off-white hover:text-gold-400 hover:bg-gold-400/5'}`}
                 onClick={() => setIsMenuOpen(false)}
               >
                 Blog
               </Link>
-              <Link 
-                to="/contact" 
+              <Link
+                to="/contact"
                 className={`transition-colors py-2 px-2 rounded ${location.pathname === '/contact' ? 'text-gold-400 bg-gold-400/10' : 'text-off-white hover:text-gold-400 hover:bg-gold-400/5'}`}
                 onClick={() => setIsMenuOpen(false)}
               >
                 Contact
               </Link>
               <div className="pt-3 mt-3 border-t border-gold-400/20">
-                <Link 
-                  to="/contact" 
+                <Link
+                  to="/contact"
                   className="block w-full px-4 py-3 bg-gold-gradient text-deep-black font-semibold text-center rounded hover:opacity-90 transition-opacity"
                   onClick={() => setIsMenuOpen(false)}
                 >
