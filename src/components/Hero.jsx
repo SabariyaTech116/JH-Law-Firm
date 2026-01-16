@@ -109,33 +109,11 @@ const Hero = () => {
             {/* Right Content - 5 columns */}
             <div className="lg:col-span-5 flex justify-center lg:justify-end mt-8 lg:mt-0">
               <div ref={cardRef} className={`animate-on-scroll animate-scale ${cardVisible ? 'visible delay-4' : ''}`}>
-                {/* Trust Metrics Card */}
-                <div className="bg-black/40 backdrop-blur-sm border border-gold-400/20 rounded-2xl p-6 xs:p-8 lg:p-12 shadow-2xl max-w-sm xs:max-w-md w-full">
-                  <div className="text-center mb-6 xs:mb-8">
-                    <FaCheckCircle className="text-3xl xs:text-4xl sm:text-5xl text-gold-400 mx-auto mb-3 xs:mb-4" />
-                    <h3 className="text-lg xs:text-xl sm:text-2xl font-serif font-bold text-white mb-2">Professional Excellence</h3>
-                    <p className="text-sm xs:text-base text-white/80">Trusted by thousands of clients</p>
-                  </div>
-
-                  <div className="grid grid-cols-2 gap-6 xs:gap-8">
-                    <div className="text-center group cursor-pointer">
-                      <div className="text-2xl xs:text-3xl sm:text-4xl lg:text-5xl font-bold text-white drop-shadow-2xl group-hover:scale-110 group-hover:text-gold-400 transition-all duration-500">
-                        1000+
-                      </div>
-                      <div className="text-white/80 mt-1 xs:mt-2 font-medium tracking-wide drop-shadow-lg group-hover:text-white transition-colors duration-300 text-xs xs:text-sm">
-                        CLIENTS SERVED
-                      </div>
-                    </div>
-                    <div className="text-center group cursor-pointer">
-                      <div className="text-2xl xs:text-3xl sm:text-4xl lg:text-5xl font-bold text-white drop-shadow-2xl group-hover:scale-110 group-hover:text-gold-400 transition-all duration-500">
-                        98%
-                      </div>
-                      <div className="text-white/80 mt-1 xs:mt-2 font-medium tracking-wide drop-shadow-lg group-hover:text-white transition-colors duration-300 text-xs xs:text-sm">
-                        SUCCESS RATE
-                      </div>
-                    </div>
-                  </div>
-                </div>
+                <img 
+                  src="src/assets/images/profjh.png" 
+                  alt="Professional" 
+                  className="w-full h-auto max-w-md rounded-2xl shadow-2xl border border-gold-400/20"
+                />
               </div>
             </div>
           </div>
